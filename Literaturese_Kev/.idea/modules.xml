@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Literature-se_Kev.iml" filepath="$PROJECT_DIR$/Literature-se_Kev.iml" group="Literature-se_Kev" />
+      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" group="Literature-se_Kev/app" />
+    </modules>
+  </component>
+</project>
