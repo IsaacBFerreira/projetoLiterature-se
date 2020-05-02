@@ -1,4 +1,4 @@
-package com.example.literature_se_isaac;
+package com.example.literaturese_isaac;
 
 import androidx.appcompat.app.AppCompatActivity;
 
