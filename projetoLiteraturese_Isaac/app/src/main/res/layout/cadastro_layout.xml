@@ -15,7 +15,7 @@
         tools:layout_editor_absoluteX="122dp"
         tools:layout_editor_absoluteY="124dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="80dp"
         android:layout_alignParentTop="true"/>
 
     <EditText
@@ -84,5 +84,17 @@
         android:layout_centerHorizontal="true"
         android:text="Cadastrar"
         android:textColor="#ffffff"/>
+
+    <Button
+        android:id="@+id/btnVoltar"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:text="Voltar"
+        android:drawableLeft="@drawable/abc_vector_test"
+        android:textColor="#ffffff"
+        android:background="@drawable/button_rectangle"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"/>
 
 </RelativeLayout>
