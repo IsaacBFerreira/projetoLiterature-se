@@ -1,14 +1,14 @@
 package com.example.projetoliterature_se_isaac;
 
-import androidx.annotation.NonNull;
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.annotation.NonNull;
+import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -27,7 +27,6 @@ public class CadastroActivity extends AppCompatActivity {
         setContentView(R.layout.activity_cadastro);
         inicializarComponentes();
 
-
         eventoClicks();
     }
 
@@ -35,21 +34,23 @@ public class CadastroActivity extends AppCompatActivity {
         btnVoltar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if((editNome.equals("")) || (editEmail.equals("")) || (editSenha.equals("")) || (editCSenha.equals(""))){
-                    Toast.makeText(CadastroActivity.this, "Preencha todos os campos!", Toast.LENGTH_LONG).show();
-                }else if(editCSenha!=editSenha){
-                    Toast.makeText(CadastroActivity.this, "As senhas não coincidem!", Toast.LENGTH_LONG).show();
-                }else{
-                    // cadastra os dados
-                }
+                Intent it = new Intent(CadastroActivity.this, MainActivity.class);
+                startActivity(it);
+                finish();
             }
         });
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = editEmail.getText().toString().trim();
-                String senha = editSenha.getText().toString().trim();
-                criarUser(email, senha);
+                if((editNome.equals("")) || (editEmail.equals("")) || (editSenha.equals("")) || (editCSenha.equals(""))){
+                    Toast.makeText(CadastroActivity.this, "Preencha todos os campos!", Toast.LENGTH_LONG).show();
+                }else if(editCSenha!=editSenha){
+                    Toast.makeText(CadastroActivity.this, "As senhas não coincidem!", Toast.LENGTH_LONG).show();
+                }else{
+                    String email = editEmail.getText().toString().trim();
+                    String senha = editSenha.getText().toString().trim();
+                    criarUser(email, senha);
+                }
             }
         });
     }
@@ -60,7 +61,7 @@ public class CadastroActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     alert("Usuário cadastrado com sucesso!");
-                    Intent it = new Intent(CadastroActivity.this, Perfil.class);
+                    Intent it = new Intent(CadastroActivity.this, MainActivity.class);
                     startActivity(it);
                     finish();
                 }else{

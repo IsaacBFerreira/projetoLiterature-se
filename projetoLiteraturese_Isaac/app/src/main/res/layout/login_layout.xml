@@ -34,7 +34,7 @@
         android:textColor="#ffffff"
         android:hint="Senha"
         android:textColorHint="#ffffff"
-        android:drawableLeft="@drawable/senha"
+        android:drawableLeft="@drawable/lock"
         android:background="#11000000"
         android:layout_width="250dp"
         android:layout_height="30dp"
