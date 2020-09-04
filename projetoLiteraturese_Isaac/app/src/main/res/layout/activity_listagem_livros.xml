@@ -4,13 +4,12 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".CadastroActivity"
-    android:background="@drawable/wallpaper_4">
+    tools:context=".ListagemLivros">
 
-    <include
-        layout="@layout/cadastro_layout"
-        android:layout_width="350dp"
-        android:layout_height="700dp"
-        android:layout_centerInParent="true" />
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerview">
 
+    </androidx.recyclerview.widget.RecyclerView>
 </RelativeLayout>

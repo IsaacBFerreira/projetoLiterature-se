@@ -11,7 +11,7 @@
         android:layout_width="200dp"
         android:layout_height="200dp"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="160dp"
+        android:layout_marginTop="130dp"
         app:srcCompat="@drawable/students" />
 
     <EditText
@@ -62,8 +62,20 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/btnLogin"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="20dp"
         android:text="Cadastre-se aqui"
+        android:textColor="#40B39C"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/txtResetSenha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtCadastre_se"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Esqueceu sua senha?"
         android:textColor="#40B39C"
         android:textSize="18sp"
         android:textStyle="bold" />

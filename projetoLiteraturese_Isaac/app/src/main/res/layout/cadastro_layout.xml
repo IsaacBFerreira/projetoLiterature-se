@@ -11,26 +11,12 @@
         android:id="@+id/iv_user"
         android:layout_width="120dp"
         android:layout_height="120dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="70dp"
         app:srcCompat="@drawable/google_for_education"
         tools:layout_editor_absoluteX="122dp"
-        tools:layout_editor_absoluteY="124dp"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="80dp"
-        android:layout_alignParentTop="true"/>
-
-    <EditText
-        android:id="@+id/et_name"
-        android:hint="Nome"
-        android:textColorHint="#ffffff"
-        android:background="#11000000"
-        android:textColor="#40B39C"
-        android:layout_width="260dp"
-        android:layout_height="40dp"
-        android:inputType="textPersonName"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="40dp"
-        android:ems="10"
-        android:layout_below="@id/iv_user"/>
+        tools:layout_editor_absoluteY="124dp" />
 
     <EditText
         android:id="@+id/et_email"
@@ -40,11 +26,11 @@
         android:ems="10"
         android:hint="E-mail"
         android:textColorHint="#ffffff"
-        android:layout_below="@id/et_name"
-        android:layout_marginTop="40dp"
+        android:layout_below="@id/iv_user"
+        android:layout_marginTop="80dp"
         android:layout_centerHorizontal="true"
         android:inputType="textPersonName"
-        android:textColor="#40B39C" />
+        android:textColor="#FFFFFF" />
 
     <EditText
         android:id="@+id/et_senha"
@@ -58,7 +44,7 @@
         android:hint="Senha"
         android:textColorHint="#ffffff"
         android:inputType="textPersonName"
-        android:textColor="#40B39C" />
+        android:textColor="#FFFFFF" />
 
     <EditText
         android:id="@+id/et_csenha"
@@ -72,7 +58,7 @@
         android:inputType="textPersonName"
         android:hint="Confirme a senha"
         android:textColorHint="#ffffff"
-        android:textColor="#40B39C"/>
+        android:textColor="#FFFFFF"/>
 
     <Button
         android:id="@+id/btn_cadastrar"

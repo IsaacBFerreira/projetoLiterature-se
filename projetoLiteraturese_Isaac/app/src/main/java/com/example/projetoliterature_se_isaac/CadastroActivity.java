@@ -17,7 +17,7 @@ import com.google.firebase.auth.FirebaseAuth;
 
 public class CadastroActivity extends AppCompatActivity {
 
-    private EditText editNome, editEmail, editSenha, editCSenha;
+    private EditText editEmail, editSenha, editCSenha;
     private Button btnCadastrar, btnVoltar;
     private FirebaseAuth auth;
 
@@ -42,15 +42,9 @@ public class CadastroActivity extends AppCompatActivity {
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if((editNome.equals("")) || (editEmail.equals("")) || (editSenha.equals("")) || (editCSenha.equals(""))){
-                    Toast.makeText(CadastroActivity.this, "Preencha todos os campos!", Toast.LENGTH_LONG).show();
-                }else if(editCSenha!=editSenha){
-                    Toast.makeText(CadastroActivity.this, "As senhas não coincidem!", Toast.LENGTH_LONG).show();
-                }else{
-                    String email = editEmail.getText().toString().trim();
-                    String senha = editSenha.getText().toString().trim();
-                    criarUser(email, senha);
-                }
+                String email = editEmail.getText().toString().trim();
+                String senha = editSenha.getText().toString().trim();
+                criarUser(email, senha);
             }
         });
     }
@@ -61,7 +55,7 @@ public class CadastroActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     alert("Usuário cadastrado com sucesso!");
-                    Intent it = new Intent(CadastroActivity.this, MainActivity.class);
+                    Intent it = new Intent(CadastroActivity.this, Perfil.class);
                     startActivity(it);
                     finish();
                 }else{
@@ -76,7 +70,6 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void inicializarComponentes(){
-        editNome = findViewById(R.id.et_name);
         editEmail = findViewById(R.id.et_email);
         editSenha = findViewById(R.id.et_senha);
         editCSenha = findViewById(R.id.et_csenha);
