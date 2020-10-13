@@ -70,7 +70,6 @@ public class MainActivity extends AppCompatActivity {
                         if(task.isSuccessful()){
                             Intent i = new Intent(MainActivity.this, ListagemLivros.class);
                             startActivity(i);
-                            finish();
                         }else{
                             alert("E-mail ou senha incorretos");
                         }

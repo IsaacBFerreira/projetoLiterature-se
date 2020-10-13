@@ -1,5 +1,6 @@
 package com.example.projetoliterature_se_isaac;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -27,10 +28,12 @@ public class ListagemLivros extends AppCompatActivity {
     DatabaseReference databaseReference;
     FirebaseRecyclerOptions<ListItem> options;
     FirebaseRecyclerAdapter<ListItem, ListagemViewHolder> adapter;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_listagem_livros);
+
 
         recyclerView = (RecyclerView)findViewById(R.id.recyclerview);
         recyclerView.setHasFixedSize(true);
@@ -56,6 +59,13 @@ public class ListagemLivros extends AppCompatActivity {
                 });
 
                 holder.t1.setText(model.getNome());
+                holder.i1.setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent it = new Intent(getApplicationContext(), DadosLivro.class);
+                        startActivity(it);
+                    }
+                });
             }
 
             @NonNull

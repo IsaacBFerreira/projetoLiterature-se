@@ -18,5 +18,6 @@ public class ListagemViewHolder extends RecyclerView.ViewHolder {
 
         t1 = (TextView)itemView.findViewById(R.id.nome);
         i1 = (ImageView)itemView.findViewById(R.id.imagem);
+
     }
 }

@@ -12,17 +12,20 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ListagemLivros"></activity>
+        <activity android:name=".DadosLivro" />
+        <activity android:name=".ListagemLivros" />
         <activity android:name=".ResetarSenha" />
         <activity android:name=".Perfil" />
         <activity android:name=".CadastroActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".AberturaActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainActivity"></activity>
+
     </application>
 
 </manifest>
