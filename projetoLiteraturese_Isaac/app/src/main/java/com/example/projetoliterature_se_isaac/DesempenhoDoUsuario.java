@@ -3,34 +3,30 @@ package com.example.projetoliterature_se_isaac;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.MenuItem;
-import android.widget.ImageView;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
-public class DadosLivro extends AppCompatActivity {
+public class DesempenhoDoUsuario extends AppCompatActivity {
 
-    ImageView capaLivro;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dados_livro);
+        setContentView(R.layout.activity_desempenho_do_usuario);
 
         //Inicializando o BottomNavigation
         BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
 
         //Setar o Home
-        bottomNavigationView.setSelectedItemId(R.id.home);
+        bottomNavigationView.setSelectedItemId(R.id.desempenho);
         //Perform ItemSelectedListener
         bottomNavigationView.setOnNavigationItemSelectedListener(new BottomNavigationView.OnNavigationItemSelectedListener() {
             @Override
             public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
                 switch (menuItem.getItemId()) {
                     case R.id.desempenho:
-                        startActivity(new Intent(getApplicationContext(), DesempenhoDoUsuario.class));
-                        overridePendingTransition(0,0);
                         return true;
                     case R.id.home:
                         startActivity(new Intent(getApplicationContext(), ListagemLivros.class));
@@ -44,9 +40,5 @@ public class DadosLivro extends AppCompatActivity {
                 return false;
             }
         });
-
-        capaLivro = (ImageView)findViewById(R.id.capaLivro);
     }
-
-
 }

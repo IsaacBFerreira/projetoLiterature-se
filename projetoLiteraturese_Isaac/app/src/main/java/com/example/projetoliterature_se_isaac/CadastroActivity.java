@@ -31,14 +31,6 @@ public class CadastroActivity extends AppCompatActivity {
     }
 
     private void eventoClicks(){
-        btnVoltar.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent it = new Intent(CadastroActivity.this, MainActivity.class);
-                startActivity(it);
-                finish();
-            }
-        });
         btnCadastrar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -55,7 +47,7 @@ public class CadastroActivity extends AppCompatActivity {
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
                     alert("Usuário cadastrado com sucesso!");
-                    Intent it = new Intent(CadastroActivity.this, Perfil.class);
+                    Intent it = new Intent(CadastroActivity.this, ListagemLivros.class);
                     startActivity(it);
                     finish();
                 }else{
@@ -74,7 +66,6 @@ public class CadastroActivity extends AppCompatActivity {
         editSenha = findViewById(R.id.et_senha);
         editCSenha = findViewById(R.id.et_csenha);
         btnCadastrar = findViewById(R.id.btn_cadastrar);
-        btnVoltar = findViewById(R.id.btnVoltar);
     }
 
     @Override

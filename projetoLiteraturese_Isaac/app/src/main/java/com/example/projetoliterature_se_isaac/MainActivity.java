@@ -40,7 +40,6 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 Intent it = new Intent(MainActivity.this, CadastroActivity.class);
                 startActivity(it);
-                finish();
             }
         });
 
@@ -57,7 +56,12 @@ public class MainActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = etEmail.getText().toString().trim();
                 String senha = etSenha.getText().toString().trim();
-                login(email,senha);
+
+                if(email.equals("")){
+                    alert("Preencha os campos!");
+                }else{
+                    login(email,senha);
+                }
             }
         });
     }

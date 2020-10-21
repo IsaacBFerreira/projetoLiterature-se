@@ -14,6 +14,7 @@
             android:layout_width="match_parent"
             android:layout_height="300dp"
             android:id="@+id/imagem"
+            android:background="@drawable/borda_list_item"
             android:scaleType="centerCrop"/>
         
         <TextView
