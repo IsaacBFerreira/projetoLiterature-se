@@ -1,14 +1,14 @@
-#h1 Literature-se #h1
+ Literature-se 
 
 
-Literature-se é um projeto de curso técnico em informática desenvolvido em Java, IDE Androidstudio
+Literature-se é um projeto de curso técnico em informática desenvolvido em Java, IDE AndroidStudio
 
 
-#h2 Instalar 
+ Instalar 
 
 
 
-#h2 Funcionalidades:
+ Funcionalidades:
 1. Resolver Questões
 2. Acompanhar progresso;
 
