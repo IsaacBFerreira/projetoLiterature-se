@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.projetoliterature_se_isaac">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/icone_app"
+        android:label="Literature-se"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        android:usesCleartextTraffic="true">
+        <activity android:name=".DetalhesDoLivro" />
+        <activity android:name=".DesempenhoDoUsuario" />
+        <activity android:name=".DadosLivro" />
+        <activity android:name=".ListagemLivros" />
+        <activity android:name=".ResetarSenha" />
+        <activity android:name=".Perfil" />
+        <activity android:name=".CadastroActivity" />
+        <activity android:name=".MainActivity" />
+        <activity android:name=".IntroActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".AberturaActivity">
+
+        </activity>
+    </application>
+
+</manifest>

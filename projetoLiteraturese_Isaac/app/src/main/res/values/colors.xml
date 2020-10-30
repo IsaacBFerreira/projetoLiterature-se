@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#6200EE</color>
+    <color name="colorPrimaryDark">#3700B3</color>
+    <color name="colorAccent">#03DAC5</color>
+    <color name="darkerGray">#FF444444</color>
+
+    <color name="colorWhite">#FFFFFF</color>
+    <color name="colorTransparentWhite">#cccccc</color>
+
+    <!-- Cores dos botões da intro -->
+    <color name="gradiente_start_color">#4c84ff</color>
+    <color name="gradiente_end_color">#18a3fe</color>
+
+    <!-- Cores do texto da intro -->
+    <color name="tab_indicator_gray">#c0c0c0</color>
+    <color name="intro_title_color">#000000</color>
+    <color name="intro_descritpion_color">#656565</color>
+</resources>
