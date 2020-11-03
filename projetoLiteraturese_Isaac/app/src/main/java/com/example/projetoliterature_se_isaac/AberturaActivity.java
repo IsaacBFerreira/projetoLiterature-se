@@ -40,6 +40,6 @@ public class AberturaActivity extends AppCompatActivity implements Runnable{
 
         }
         finish();
-        startActivity(new Intent(this, MainActivity.class));
+        startActivity(new Intent(this, IntroActivity.class));
     }
 }
