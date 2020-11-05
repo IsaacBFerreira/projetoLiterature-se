@@ -12,6 +12,7 @@ import com.example.projetoliterature_se_isaac.R;
 public class ListagemViewHolder extends RecyclerView.ViewHolder {
     public TextView t1;
     public ImageView i1;
+    public String id;
 
     public ListagemViewHolder(@NonNull View itemView) {
         super(itemView);

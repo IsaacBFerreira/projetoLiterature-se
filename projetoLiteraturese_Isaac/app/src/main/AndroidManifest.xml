@@ -12,7 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".DetalhesDoLivro" />
         <activity android:name=".DesempenhoDoUsuario" />
         <activity android:name=".DadosLivro" />
         <activity android:name=".ListagemLivros" />

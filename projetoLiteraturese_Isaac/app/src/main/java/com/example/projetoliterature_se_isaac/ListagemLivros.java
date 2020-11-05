@@ -28,6 +28,7 @@ public class ListagemLivros extends AppCompatActivity {
 
 
     RecyclerView recyclerView, recyclerView2;
+    String id;
     DatabaseReference databaseReference,databaseReference2;
     FirebaseRecyclerOptions<ListItem> options, options2;
     FirebaseRecyclerAdapter<ListItem, ListagemViewHolder> adapter, adapter2;
@@ -70,8 +71,8 @@ public class ListagemLivros extends AppCompatActivity {
         recyclerView.setHasFixedSize(true);
         recyclerView2.setHasFixedSize(true);
 
-        databaseReference = FirebaseDatabase.getInstance().getReference().child("CategoryBackground").child("Machado de Assis");
-        databaseReference2 = FirebaseDatabase.getInstance().getReference().child("CategoryBackground").child("José de Alencar");
+        databaseReference = FirebaseDatabase.getInstance().getReference().child("Livros").child("Machado de Assis");
+        databaseReference2 = FirebaseDatabase.getInstance().getReference().child("Livros").child("José de Alencar");
 
         options = new FirebaseRecyclerOptions.Builder<ListItem>()
                 .setQuery(databaseReference, ListItem.class).build();
@@ -81,7 +82,7 @@ public class ListagemLivros extends AppCompatActivity {
 
         adapter = new FirebaseRecyclerAdapter<ListItem, ListagemViewHolder>(options) { //Machado de Assis
             @Override
-            protected void onBindViewHolder(@NonNull ListagemViewHolder holder, int position, @NonNull ListItem model) {
+            protected void onBindViewHolder(@NonNull final ListagemViewHolder holder, int position, @NonNull final ListItem model) {
                 Picasso.get().load(model.getImageLink()).into(holder.i1, new Callback() {
                     @Override
                     public void onSuccess() {
@@ -99,6 +100,10 @@ public class ListagemLivros extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(getApplicationContext(), DadosLivro.class);
+                        intent.putExtra("imageLink", model.getImageLink());
+                        intent.putExtra("autor", model.getAutor());
+                        intent.putExtra("genero", model.getGenero());
+                        intent.putExtra("ano", model.getAno());
                         startActivity(intent);
                     }
                 });

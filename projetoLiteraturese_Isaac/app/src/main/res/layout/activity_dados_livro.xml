@@ -75,7 +75,9 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.491"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/capaLivro"
+        app:layout_constraintVertical_bias="1.0" />
 
     <Button
         android:id="@+id/btnQuestoes"
@@ -83,13 +85,13 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="157dp"
         android:layout_marginEnd="166dp"
-        android:layout_marginBottom="68dp"
+        android:layout_marginBottom="88dp"
+        android:background="@drawable/button_rectangle"
         android:text="Ir para questões"
         android:textColor="@android:color/white"
-        android:background="@drawable/button_rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.426"
+        app:layout_constraintHorizontal_bias="0.464"
         app:layout_constraintStart_toStartOf="parent" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
