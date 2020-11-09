@@ -9,8 +9,7 @@ Literature-se é um projeto de curso técnico em informática desenvolvido em Ja
 
 1. Resolver questões por assunto/livro/autor;
 2. Acompanhar seu desempenho através de gráficos;
-3. 
-4.
+
 
  
  ## Instalar 
@@ -19,7 +18,7 @@ Literature-se é um projeto de curso técnico em informática desenvolvido em Ja
  
  Passo a passo:
  
- 1. Acessar o link () e fazer o download pelo Google Drive.
+ 1. Acessar o link (https://drive.google.com/drive/folders/1hzD6f-1n6MUjqWi9jzUQ-VqvraVmDqm8?usp=sharing) e fazer o download pelo Google Drive.
  2. Abrir no diretório onde está o apk e instalar.
  3. Iniciar instalação.
  4. Conceder as permissões necessárias.
