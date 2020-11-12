@@ -4,62 +4,46 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Perfil">
+    tools:context=".Perfil"
+    android:background="@drawable/background_perfil">
 
     <TextView
         android:id="@+id/txtPerfilEmail"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginStart="177dp"
-        android:layout_marginEnd="176dp"
-        android:layout_marginBottom="36dp"
-        android:text="Email"
+        android:layout_marginTop="231dp"
         android:background="#11000000"
+        android:text="Email"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/txtPerfil_Id"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
 
     <TextView
         android:id="@+id/txtPerfil_Id"
         android:layout_width="250dp"
         android:layout_height="40dp"
-        android:layout_marginStart="82dp"
-        android:layout_marginEnd="80dp"
-        android:layout_marginBottom="125dp"
-        android:text="Id"
+        android:layout_marginTop="32dp"
         android:background="#11000000"
+        android:text="Id"
         android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/btnLogOut"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintHorizontal_bias="0.496"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txtPerfilEmail" />
 
     <Button
         android:id="@+id/btnLogOut"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="160dp"
-        android:layout_marginEnd="160dp"
         android:layout_marginBottom="120dp"
+        android:background="@drawable/button_rectangle"
         android:text="Log Out"
         android:textColor="@android:color/white"
-        android:background="@drawable/button_rectangle"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <ImageView
-        android:id="@+id/imageView2"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="155dp"
-        android:layout_marginTop="130dp"
-        android:layout_marginEnd="155dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/icons_usuario" />
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_navigation"
@@ -70,8 +54,15 @@
         app:itemIconTint="@android:color/white"
         app:itemTextColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
         app:menu="@menu/menu_navigation"
         tools:ignore="MissingConstraints" />
 
-    <include layout="@layout/toolbar"/>
+    <include
+        android:id="@+id/include"
+        layout="@layout/toolbar"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -14,12 +14,16 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
 
 public class CadastroActivity extends AppCompatActivity {
 
     private EditText editEmail, editSenha, editCSenha;
     private Button btnCadastrar, btnVoltar;
     private FirebaseAuth auth;
+    private FirebaseDatabase database;
+    private DatabaseReference myRef;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -28,6 +32,8 @@ public class CadastroActivity extends AppCompatActivity {
         inicializarComponentes();
 
         eventoClicks();
+        database = FirebaseDatabase.getInstance();
+        myRef = database.getReference();
     }
 
     private void eventoClicks(){
@@ -36,7 +42,13 @@ public class CadastroActivity extends AppCompatActivity {
             public void onClick(View v) {
                 String email = editEmail.getText().toString().trim();
                 String senha = editSenha.getText().toString().trim();
-                criarUser(email, senha);
+                String confirmar_senha = editCSenha.getText().toString().trim();
+
+                if(confirmar_senha.equals(senha)) {
+                    criarUser(email, senha);
+                }else{
+                    alert("As senhas não coincidem!");
+                }
             }
         });
     }
@@ -46,12 +58,13 @@ public class CadastroActivity extends AppCompatActivity {
             @Override
             public void onComplete(@NonNull Task<AuthResult> task) {
                 if(task.isSuccessful()){
+                    String key = myRef.child("Usuarios").push().getKey();
                     alert("Usuário cadastrado com sucesso!");
                     Intent it = new Intent(CadastroActivity.this, ListagemLivros.class);
                     startActivity(it);
                     finish();
                 }else{
-                    alert("Erro de cadastro!");
+                    alert("Verifique se o e-mail está escrito corretamente");
                 }
             }
         });

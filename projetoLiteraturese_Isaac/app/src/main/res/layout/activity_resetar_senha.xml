@@ -5,55 +5,38 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ResetarSenha"
-    android:background="@drawable/redefinir_senha">
+    android:background="@drawable/background_redefinir_senha">
 
     <Button
         android:id="@+id/btnResetarSenha"
-        android:layout_width="100dp"
+        android:layout_width="150dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="162dp"
-        android:layout_marginEnd="161dp"
-        android:layout_marginBottom="96dp"
+        android:layout_marginStart="160dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="92dp"
         android:background="@drawable/button_rectangle"
         android:gravity="center"
         android:text="Redefinir"
         android:textColor="@android:color/white"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.583"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
         android:id="@+id/txtEmail"
         android:layout_width="300dp"
-        android:layout_height="40dp"
-        android:layout_marginStart="102dp"
-        android:layout_marginTop="240dp"
-        android:layout_marginEnd="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="340dp"
         android:background="@drawable/edit_text_background"
         android:drawableStart="@drawable/custom_email_item"
         android:drawablePadding="3dp"
         android:ems="10"
-        android:inputType="textEmailAddress"
         android:hint="Email"
+        android:inputType="textEmailAddress"
+        android:textColor="#9853FB"
         android:textColorHint="@android:color/white"
-        android:textColor="@android:color/white"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.516"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/textView3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="52dp"
-        android:layout_marginTop="68dp"
-        android:text="REDEFINA SUA SENHA"
-        android:textAllCaps="false"
-        android:textColor="#FFFFFF"
-        android:textSize="30sp"
-        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 

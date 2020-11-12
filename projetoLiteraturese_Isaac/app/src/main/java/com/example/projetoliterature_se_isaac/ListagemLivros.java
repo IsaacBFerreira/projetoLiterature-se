@@ -66,8 +66,8 @@ public class ListagemLivros extends AppCompatActivity {
             }
         });
 
-        recyclerView = (RecyclerView)findViewById(R.id.recyclerview);//Machado de Assis
-        recyclerView2 = (RecyclerView)findViewById(R.id.recyclerview2);//José de Alencar
+        recyclerView = findViewById(R.id.recyclerview);//Machado de Assis
+        recyclerView2 = findViewById(R.id.recyclerview2);//José de Alencar
         recyclerView.setHasFixedSize(true);
         recyclerView2.setHasFixedSize(true);
 
@@ -104,6 +104,7 @@ public class ListagemLivros extends AppCompatActivity {
                         intent.putExtra("autor", model.getAutor());
                         intent.putExtra("genero", model.getGenero());
                         intent.putExtra("ano", model.getAno());
+                        intent.putExtra("resumo", model.getResumo());
                         startActivity(intent);
                     }
                 });
@@ -120,7 +121,7 @@ public class ListagemLivros extends AppCompatActivity {
 
         adapter2 = new FirebaseRecyclerAdapter<ListItem, ListagemViewHolder>(options2) {
             @Override
-            protected void onBindViewHolder(@NonNull ListagemViewHolder holder, int position, @NonNull ListItem model) {
+            protected void onBindViewHolder(@NonNull ListagemViewHolder holder, int position, @NonNull final ListItem model) {
                 Picasso.get().load(model.getImageLink()).into(holder.i1, new Callback() {
                     @Override
                     public void onSuccess() {
@@ -138,6 +139,11 @@ public class ListagemLivros extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(getApplicationContext(), DadosLivro.class);
+                        intent.putExtra("imageLink", model.getImageLink());
+                        intent.putExtra("autor", model.getAutor());
+                        intent.putExtra("genero", model.getGenero());
+                        intent.putExtra("ano", model.getAno());
+                        intent.putExtra("resumo", model.getResumo());
                         startActivity(intent);
                     }
                 });
@@ -151,8 +157,7 @@ public class ListagemLivros extends AppCompatActivity {
                 return new ListagemViewHolder(view);
             }
         };
-
-        GridLayoutManager gridLayoutManager = new GridLayoutManager(getApplicationContext(), 2);
+        
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)); //Machado de Assis
         recyclerView2.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)); //Jose de Alencar
         adapter.startListening();
