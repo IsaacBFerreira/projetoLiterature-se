@@ -65,10 +65,11 @@ public class DadosLivro extends AppCompatActivity {
         btnQuestoes = findViewById(R.id.btnQuestoes);
 
         String imageLink = getIntent().getExtras().getString("imageLink");
-        String autor = getIntent().getExtras().getString("autor");
+        final String autor = getIntent().getExtras().getString("autor");
         String genero = getIntent().getExtras().getString("genero");
         String ano = getIntent().getExtras().getString("ano");
         String resumo = getIntent().getExtras().getString("resumo");
+        final String id = getIntent().getExtras().getString("id");
 
         Picasso.get().load(imageLink).into(capaLivro, new Callback() {
             @Override
@@ -85,7 +86,10 @@ public class DadosLivro extends AppCompatActivity {
         btnQuestoes.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                startActivity(new Intent(getApplicationContext(), QuestoesActivity.class));
+                Intent intent = new Intent(getApplicationContext(), QuestoesActivity.class);
+                intent.putExtra("autor", autor);
+                intent.putExtra("id", id);
+                startActivity(intent);
             }
         });
 

@@ -32,7 +32,7 @@ public class ListagemLivros extends AppCompatActivity {
     DatabaseReference databaseReference,databaseReference2;
     FirebaseRecyclerOptions<ListItem> options, options2;
     FirebaseRecyclerAdapter<ListItem, ListagemViewHolder> adapter, adapter2;
-    
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -86,7 +86,7 @@ public class ListagemLivros extends AppCompatActivity {
                 Picasso.get().load(model.getImageLink()).into(holder.i1, new Callback() {
                     @Override
                     public void onSuccess() {
-                        
+
                     }
 
                     @Override
@@ -105,6 +105,7 @@ public class ListagemLivros extends AppCompatActivity {
                         intent.putExtra("genero", model.getGenero());
                         intent.putExtra("ano", model.getAno());
                         intent.putExtra("resumo", model.getResumo());
+                        intent.putExtra("id", model.getId());
                         startActivity(intent);
                     }
                 });
@@ -157,7 +158,7 @@ public class ListagemLivros extends AppCompatActivity {
                 return new ListagemViewHolder(view);
             }
         };
-        
+
         recyclerView.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)); //Machado de Assis
         recyclerView2.setLayoutManager(new LinearLayoutManager(this, LinearLayoutManager.HORIZONTAL, false)); //Jose de Alencar
         adapter.startListening();

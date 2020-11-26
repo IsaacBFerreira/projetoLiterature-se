@@ -1,15 +1,16 @@
 package com.example.projetoliterature_se_isaac.Model;
 
 public class ListItem {
-    public String nome, imageLink, autor, ano, genero, resumo;
+    public String nome, imageLink, autor, ano, genero, resumo, id;
 
-    public ListItem(String nome, String imageLink, String autor, String ano, String genero, String resumo) {
+    public ListItem(String nome, String imageLink, String autor, String ano, String genero, String resumo, String id) {
         this.nome = nome;
         this.imageLink = imageLink;
         this.autor = autor;
         this.ano = ano;
         this.genero = genero;
         this.resumo = resumo;
+        this.id = id;
     }
 
     public ListItem() {
@@ -61,5 +62,13 @@ public class ListItem {
 
     public void setResumo(String resumo) {
         this.resumo = resumo;
+    }
+
+    public String getId() {
+        return id;
+    }
+
+    public void setId(String id) {
+        this.id = id;
     }
 }
